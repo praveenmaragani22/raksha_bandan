@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfdfd, #478aac);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  margin-top: 80px;
+  perspective: 1200px;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.2s ease;
+  cursor: pointer;
+}
+
+.card.opened {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  padding: 30px;
+  text-align: center;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff3f8;
+}
+
+.card-inner {
+  transform: rotateY(180deg);
+  background: #fff0f5;
+  animation: fadeIn 2s ease;
+}
+
+.card-inner button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #bb377d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.rakhi {
+  position: absolute;
+  width: 80px;
+  top: 20px;
+  z-index: 1;
+}
+
+.rakhi.left { left: 50px; transform: rotate(-20deg); }
+.rakhi.right { right: 50px; transform: rotate(20deg); }
+
+.photo-book {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  animation: fadeIn 1.5s ease;
+}
+
+.photo-book h2 {
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo.active img {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  border: 3px solid white;
+}
+
+#photoMessage {
+  margin-top: 20px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #222;
+  max-width: 80%;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.2);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Rakshabandhan Sister 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <img src="images/rakhi.png" class="rakhi left" />
+  <img src="images/rakhi1.png" class="rakhi right" />
+
+  <div class="card-container">
+    <div class="card" id="greetingCard">
+      <div class="card-front">
+        <h1>💌 Happy Rakshabandhan!</h1>
+        <p>Click to Open Your Surprise 🎁</p>
+      </div>
+      <div class="card-inner">
+        <h2>To My Dearest Sister 💖</h2>
+        <p>On this Rakhi, I just want to say<br>
+        You are not just my sister, you're my forever friend, my secret keeper, and my biggest support. <br>
+        Thank you for being you. 🥹💕</p>
+        <p>With all my heart,<br>Your Brother 💙</p>
+        <button onclick="showPhotoBook()">📸 Open Memory Book</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-book" id="photoBook">
+    <h2>📖 Our Sweet Memories</h2>
+    <div class="photos">
+      <div class="photo" onclick="highlightPhoto(this, 'From playful fights over TV remotes to sharing the last piece of chocolate, our childhood was nothing short of chaos—and magic. Those small moments may have seemed ordinary, but today, they are the most treasured memories. You were my partner in every mischief and my defender in every scolding. This photo reminds me of how far we have come, side by side. 😄')">
+        <img src="images/memory1.jpeg" alt="Memory 1">
+      </div>
+      <div class="photo" onclick="highlightPhoto(this, 'Remember this Rakhi? I still feel your love. 🥰')">
+        <img src="images/memory2.jpeg" alt="Memory 2">
+      </div>
+      <div class="photo" onclick="highlightPhoto(this, 'We may have grown older, taken different paths, and lived different lives—but every Raksha Bandhan brings us back to where we began: family, memories, and love. This photo is a reminder that no matter how busy or far we are, our bond always pulls us closer. 🤗')">
+        <img src="images/memory3.jpeg" alt="Memory 3">
+      </div>
+      <div class="photo" onclick="highlightPhoto(this, 'In you, I found not just a sibling, but a lifetime protector, a secret keeper, and a forever friend. This picture speaks of all those times you stood by me—even when I didn’t know I needed you. On this Rakhi, I celebrate not just the day, but you—my constant since the beginning. 💕')">
+        <img src="images/memory4.jpeg" alt="Memory 4">
+      </div>
+    </div>
+    <p id="photoMessage"></p>
+  </div>
+
+  <footer>
+    <p>💌 Hey sister! Send me a message — what would you like to say to your brother?</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
